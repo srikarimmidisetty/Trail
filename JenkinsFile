@@ -1,11 +1,16 @@
-pipeline {
-agent any
-stage {
-stage ('Git CHeckout')
-{
-steps {
-git branch: 'main', changelog: false, poll: false, url: 'https://github.com/srikarimmidisetty/Trail.git' 
-}
-}
-}
-}
+
+pipeline{
+
+    agent any
+    //agent { label 'Demo' }
+
+    stages{
+
+	stage('Git Checkout'){
+         
+                gitCheckout(
+                branch: "main",
+                url: "https://github.com/srikarimmidisetty/Trail.git"
+            )
+            }
+        }
