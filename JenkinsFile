@@ -5,8 +5,7 @@ pipeline{
 	stage('Git Checkout'){
 		steps{         
                 gitCheckout(
-                branch: "master",
-                url: "https://github.com/srikarimmidisetty/Trail.git"
+                git changelog: false, credentialsId: '43a496c9-fb69-4842-a4c8-cc141cc77b93', poll: false, url: 'https://github.com/srikarimmidisetty/Trail.git'
             )
             }
 	   }
