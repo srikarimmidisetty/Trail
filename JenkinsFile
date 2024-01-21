@@ -9,7 +9,7 @@ pipeline{
 	stage('Git Checkout'){
          
                 gitCheckout(
-                branch: "main",
+                branch: "master",
                 url: "https://github.com/srikarimmidisetty/Trail.git"
             )
             }
