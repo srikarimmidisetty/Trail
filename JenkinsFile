@@ -1,13 +1,11 @@
 pipeline{
     agent any
-    //agent { label 'Demo' }
-    stages{
-	stage('Git Checkout'){
-		steps{         
-                gitCheckout(
+    stages {
+        stage("CHECKOUT")
+        {
+            steps{
                 git changelog: false, credentialsId: '43a496c9-fb69-4842-a4c8-cc141cc77b93', poll: false, url: 'https://github.com/srikarimmidisetty/Trail.git'
-            )
             }
-	   }
         }
+    }
 }
